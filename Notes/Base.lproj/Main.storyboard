@@ -53,27 +53,33 @@
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NoteCell" id="jlR-vF-qT5" customClass="NoteCell" customModule="Notes" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="72" width="414" height="43"/>
+                                <rect key="frame" x="0.0" y="72" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jlR-vF-qT5" id="PHX-r5-5Zf">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0PB-au-4Wt">
-                                            <rect key="frame" x="30" y="11" width="42" height="21"/>
+                                            <rect key="frame" x="30" y="11" width="304" height="21.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UQq-DI-zJI">
-                                            <rect key="frame" x="358" y="0.0" width="46" height="43"/>
+                                            <rect key="frame" x="354" y="0.0" width="50" height="43.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="50" id="rWc-5d-WpA"/>
+                                            </constraints>
                                             <state key="normal" image="delete.left" catalog="system"/>
+                                            <connections>
+                                                <action selector="removeNoteBtnPressed:" destination="jlR-vF-qT5" eventType="touchUpInside" id="u8n-te-iFq"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="0PB-au-4Wt" firstAttribute="top" secondItem="PHX-r5-5Zf" secondAttribute="topMargin" id="4Nj-Rv-jWn"/>
                                         <constraint firstAttribute="bottom" secondItem="UQq-DI-zJI" secondAttribute="bottom" id="Qqr-Fg-e6o"/>
-                                        <constraint firstItem="UQq-DI-zJI" firstAttribute="leading" secondItem="0PB-au-4Wt" secondAttribute="trailing" constant="286" id="Zb2-9h-qRd"/>
+                                        <constraint firstItem="UQq-DI-zJI" firstAttribute="leading" secondItem="0PB-au-4Wt" secondAttribute="trailing" constant="20" id="Zb2-9h-qRd"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="0PB-au-4Wt" secondAttribute="bottom" id="b1E-iX-Xg9"/>
                                         <constraint firstItem="UQq-DI-zJI" firstAttribute="top" secondItem="PHX-r5-5Zf" secondAttribute="top" id="ci4-oS-bt8"/>
                                         <constraint firstItem="0PB-au-4Wt" firstAttribute="leading" secondItem="PHX-r5-5Zf" secondAttribute="leadingMargin" constant="10" id="feL-EU-5LD"/>
